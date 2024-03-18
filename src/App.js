@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import Three from './js/Three';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className='App'>
+      <div className='cube'>
+        <Three />
+      </div>
+
+      <div className='note'>
+        <p className='deskotop-note'>click on cube and move cursor... </p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          © 2024 All rights reserved.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>Design and developed by Deepak Hegde</p>
+      </div>
     </div>
   );
 }
