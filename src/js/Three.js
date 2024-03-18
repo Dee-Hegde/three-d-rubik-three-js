@@ -15,8 +15,8 @@ const Three = () => {
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    const group = new THREE.Group(); // Create a group to hold all the cubes
-    scene.add(group); // Add the group to the scene
+    const group = new THREE.Group();
+    scene.add(group); 
 
     const createCube = (x, y, z) => {
       const cubeSize = 1.5;
@@ -24,7 +24,7 @@ const Three = () => {
       const material = new THREE.MeshPhysicalMaterial({ color: 0x404040 }); // Set color here
       const cube = new THREE.Mesh(geometry, material);
       cube.position.set(x, y, z);
-      group.add(cube); // Add each cube to the group
+      group.add(cube);
     };
 
     const createRubiksCube = () => {
