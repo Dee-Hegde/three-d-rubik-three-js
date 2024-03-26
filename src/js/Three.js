@@ -21,7 +21,12 @@ const Three = () => {
     const createCube = (x, y, z) => {
       const cubeSize = 1.5;
       const geometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
-      const material = new THREE.MeshPhysicalMaterial({ color: 0x404040 }); // Set color here
+      const material = new THREE.MeshPhysicalMaterial({
+        color: 0x404040,
+        roughness: 0.75,
+        metalness: 0.5,
+        side: THREE.DoubleSide,
+      }); // Set color here
       const cube = new THREE.Mesh(geometry, material);
       cube.position.set(x, y, z);
       group.add(cube);
